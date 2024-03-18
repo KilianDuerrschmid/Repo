@@ -1,0 +1,62 @@
+body{
+    width: 100%;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-container{
+    flex: 1;
+}
+
+.content{
+    min-height: 400px;
+}
+
+#asideLinks, #asideRechts{
+    flex: 1;
+}
+
+#divContent1, #divContent2, #divContent3, #divContent4{
+    flex: 4;
+}
+
+#divContent2, #divContent3, #divContent4{
+    display: none;
+}
+
+img{
+    width: 50px;
+}
+
+#group{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#group input{
+    width: 50%;
+}
+
+#group label{
+    width: 100%;
+    text-align: left;
+}
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media (min-width: 600px) {
+    body{
+        width: 90%;
+        margin: auto;
+    }
+    
+}
