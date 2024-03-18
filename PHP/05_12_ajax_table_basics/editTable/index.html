@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery load</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        $("document").ready(function () {
+                $.ajax({
+                    url: "output.php",
+                    type: "GET",
+                    success: function(response){
+                        $("#tableContainer").html(response);
+                    },
+                    error: function(xhr, status, error){
+                        console.error("Error loading data", status, error);
+                    }
+                })
+
+                $("#buttonLoad").click(function () {
+                    $.ajax({
+                    url: "new.html",
+                    type: "GET",
+                    success: function(response){
+                        $("#tableContainer").html(response);
+                    },
+                    error: function(xhr, status, error){
+                        console.error("Error loading data", status, error);
+                    }
+                })
+            });
+            });
+    </script>
+
+<div id="tableContainer">
+</div>
+<button id="buttonLoad" class='btn btn-primary'>Neuen Eintrag erstellen.</button>
+</body>
+
+</html>
