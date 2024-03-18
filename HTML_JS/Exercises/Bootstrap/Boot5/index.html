@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Strings</h1>
+
+        <div class="col-md-3 my-2">
+
+            <label for="length" class="form-label">Länge</label>
+            <input type="text" id="length" value="Test" class="form-control">
+            <p id="stringL"></p>
+
+            <label for="charAt" class="form-label">Zeichen an Position</label>
+            <input type="text" id="charAt" value="Test" class="form-control">
+            <input type="number" id="charAtPos" value="2" class="form-control">
+            <p id="stringChar"></p>
+
+            <label for="concat" class="form-label">Concat</label>
+            <input type="text" value="Test" id="concat" class="form-control">
+            <input type="text" value="Test2" id="concat2" class="form-control">
+            <p id="stringCon"></p>
+
+            <label for="indexOf" class="form-label">IndexOf</label>
+            <input type="text" value="Test" id="indexOf" class="form-control">
+            <input type="text" value="s" id="indexOf2" class="form-control">
+            <p id="stringPos"></p>
+
+            <label for="substring" class="form-label">Substring</label>
+            <input type="text" id="subStr" value="Test" class="form-control">
+            <input type="number" id="subStrNum" value="2" class="form-control">
+            <p id="stringSub"></p>
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="stringFunctions()">Stringfunktionen</button>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button ID</title>
+</head>
+<body>
+    <p id="p_up"></p>
+
+    <button id="1">Button 1</button>
+    <button id="2">Button 2</button>
+    <button id="3">Button 3</button>
+
+    <p id="p_down"></p>
+
+
+    <script>
+        var el_up = document.getElementById("p_up");
+    var el_down = document.getElementById("p_down");
+    el_up.innerHTML = "Klick auf den Button";
+
+    document.getElementById("1").onclick = myClick;
+    document.getElementById("2").onclick = myClick;
+    document.getElementById("3").onclick = myClick;
+
+
+    function myClick(clicked){
+        el_down.innerHTML = "Button clicked, id = " + this.id;
+    }
+    </script>
+</body>
+</html>

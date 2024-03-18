@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loop generate buttons</title>
+</head>
+
+<body>
+    <input type="number" id="start" value="1">
+    <input type="number" id="end" value="5">
+    <input type="text" name="" id="buttonName" value="Button">
+    <button id="button">click</button>
+
+    <div id="container"></div>
+
+    <script>
+        
+        document.getElementById("button").addEventListener("click", clickIt);
+
+        function clickIt() {
+            document.getElementById("container").innerHTML = "";
+
+            let start = document.getElementById("start").value
+            let end = document.getElementById("end").value
+            let name = document.getElementById("buttonName").value
+            let newButton
+
+            for (let i = start; i < end; i++) {
+                newButton = document.createElement("button")
+                console.log(name + i);
+                newButton.innerHTML = name + i
+                document.getElementById("container").append(newButton)
+            }
+            
+        }
+
+    </script>
+</body>
+
+</html>

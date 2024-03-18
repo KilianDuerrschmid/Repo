@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+</head>
+<body>
+    <button id="button1">Drück mich</button>
+    <div id="textblock">
+        <p>Dies ist ein Textblock, dem dynamisch Absätzte hinzugefügt werden können</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (){
+        
+            let text = "Dies ist ein neuer Absatz";
+
+            document.getElementById("button1").addEventListener("click", createElement);
+
+            function createElement(){
+                let container = document.getElementById("textblock");
+                let neuElement = document.createElement("p");
+                neuElement.innerText = text;
+                container.appendChild(neuElement);
+            }
+        
+        });
+    </script>
+</body>
+</html>

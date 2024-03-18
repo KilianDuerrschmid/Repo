@@ -1,0 +1,10 @@
+#checks{
+    border: 1px dotted;
+}
+
+#container{
+    background-color:rgb(247, 230, 79);
+    padding: 10px;
+    
+    box-shadow: 8px 7px black;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="JsBarcode.all.min.js"></script>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="col-md-3 my-2">
+            <h2>Barcode</h2>
+            <label for="code" class="form-label">Code</label>
+            <input type="text" id="code" value="7622200004607" class="form-control">
+
+            <button type="button" class="btn btn-primary" onclick="checkCode()">Code Prüfen und Barcode
+                erstellen</button>
+
+            <p id="result"></p>
+            <svg id="barcode" jsbarcode-format="msi"></svg>
+            <svg id="barcode2" jsbarcode-format="itf"></svg>
+            <svg id="barcode3" jsbarcode-format="upc"
+            jsbarcode-value="123456789012"
+            jsbarcode-textmargin="0"
+            jsbarcode-fontoptions="bold">></svg>
+            <svg id="barcode4"></svg>
+
+        </div>
+    </div>
+
+    <script>
+
+        function checkCode() {
+
+            let inputCode = document.getElementById("code").value
+            let proofCode = inputCode.substr(0, inputCode.length - 1);
+            let proofNum = 0;
+            let length = proofCode.length
+            let sum = 0;
+
+            console.log(proofCode);
+
+            for (i = 0; i < length; i++) {
+                if (i % 2 == 0) {
+                    sum += parseInt(proofCode[length - (i + 1)]) * 3
+                } else {
+                    sum += parseInt(proofCode[length - (i + 1)])
+                }
+            }
+
+            if (sum % 10 != 0) {
+                proofNum = ((sum % 10) - 10) * -1;
+            } else {
+                proofNum = 0;
+            }
+
+            proofCode += proofNum;
+
+            if (proofCode == inputCode) {
+                document.getElementById("result").innerHTML = "OK"
+
+                JsBarcode("#barcode", proofCode);
+                JsBarcode("#barcode2", proofCode);
+                JsBarcode("#barcode3", parseInt(proofCode));
+                JsBarcode("#barcode4", "123886", {
+                    format: "pharmacode",
+                    lineColor: "#0aa",
+                    width: 4,
+                    height: 40,
+                    displayValue: true
+                });
+
+            } else {
+                document.getElementById("result").innerHTML = "FEHLER"
+            }
+        }
+
+    </script>
+</body>
+
+</html>

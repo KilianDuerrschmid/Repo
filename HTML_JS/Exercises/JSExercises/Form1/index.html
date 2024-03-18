@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brutto Formular</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Berechnung Steuer</h1>
+
+    <form id="form1">
+        <label for="netto">Netto</label>
+        <input type="text" value="1500" id="netto">
+        <label for="steuersatz">Steuersatz</label>
+        <input type="text" value="20" id="steuersatz">
+        <label for="steuer">Steuer</label>
+        <input type="text" id="steuer">
+        <label for="brutto">Brutto</label>
+        <input type="text" id="brutto">
+        <button type="button" onclick="calc()">Berechnen</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

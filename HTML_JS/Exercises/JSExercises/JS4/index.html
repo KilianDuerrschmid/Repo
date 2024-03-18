@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loop</title>
+</head>
+
+<body>
+    <input type="number" id="start">
+    <input type="number" id="end">
+    <button id="button">click</button>
+
+    <p id="text"></p>
+
+    <script>
+        
+        document.getElementById("button").addEventListener("click", clickIt);
+
+        function clickIt() {
+            document.getElementById("text").innerHTML = "";
+
+            let start = document.getElementById("start").value
+            let end = document.getElementById("end").value
+
+            for (let i = start; i < end; i++) {
+                document.getElementById("text").append(i)
+            }
+            
+        }
+
+    </script>
+</body>
+
+</html>
