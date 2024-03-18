@@ -1,0 +1,21 @@
+# Erweitere die Tabelle players um ein Feld für den Vornamen
+
+# Füge passende Vornamen ein
+
+# Erstelle eine Abfrage mit der Vorname, Name und die ersten beiden Zeichen von Vorname und Nachname dargestellt werdeb
+
+# Erzeuge eine VIEW basierend auf der letzten Abfrage
+
+# Ermittel mit einer Funktion die ANzahl der Datensätze in der Tabelle players
+ 
+
+# Ermittel mit einer Funktion die ANzahl der Datensätze in der Tabelle players
+# die nicht in den 60er-Jahren geboren wurden
+ 
+
+# Ermittel das Alter der Spieler und zeige es zusammen mit dem Namen an
+ 
+
+#Erzeuge eine neue View in der alle Spieler und die Dauer der Mitgliedschaft gespeichert werden
+ 
+#Ermittel die Spieler (aus obiger VIEW) die länger als 50 Jahre Mitglied sind
